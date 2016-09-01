@@ -2,8 +2,26 @@
 <html>
 <head>
 	<title>YADG Game</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-	<h1>YADG Game</h1>
+	<h1>The world's first (and only) YADG Game</h1>
+
+  <div id="dayHouse"></div>
+
+  <div id="userHouse">
+    <div id="userHeader">
+      <div id="imageHouse">
+        <img src="images/userImage.jpg">
+      </div>
+      <h2></h2>
+    </div>
+    <h3>Dough:</h3><span class="userInfo" id="cash"></span>
+    <h3>Scouting Team:</h3><span class="userInfo" id="scouting"></span>
+    <button id="upgradeScouting">Upgrade Scouting</button>
+  </div>
+
+  <script src="scripts/user.js" charset="utf-8"></script>
+  <script src="scripts/app.js" charset="utf-8"></script>
 </body>
 </html>
