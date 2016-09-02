@@ -13,9 +13,9 @@ class League {
     while(this.teamList.length < this.numOfTeams) {
       let cityNum = Math.floor(Math.random() * (this.teamsLeft - 0)) + 0;
       let nameNum = Math.floor(Math.random() * (this.teamsLeft - 0)) + 0;
-      let city = this.cityList.slice(cityNum,cityNum+1);
+      let city = this.cityList.slice(cityNum, cityNum+1);
       this.cityList.splice(cityNum, 1);
-      let name = this.nameList.slice(nameNum,nameNum+1);
+      let name = this.nameList.slice(nameNum, nameNum+1);
       this.nameList.splice(nameNum, 1);
       let team = `${city} ${name}`;
       this.teamList.push(team);

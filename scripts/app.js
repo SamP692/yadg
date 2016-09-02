@@ -15,7 +15,7 @@ class App {
     this.nextDay();
   }
   newGameList () {
-    this.games = new GameList(this.teams,this.numOfTeams);
+    this.games = new GameList(this.teams, this.user.scouting);
   }
   newLeague() {
     let freshLeague = new League();
@@ -34,7 +34,6 @@ class App {
     getDayHouse.innerHTML = `Day ${this.day} <button id="newDayButton">Finish Day</button>`
     this.dayEventListener();
     this.newGameList();
-
   }
   dayEventListener() {
     let self = this;
