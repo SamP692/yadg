@@ -4,17 +4,23 @@ class App {
   constructor() {
     this.user;
     this.teams;
+    this.games;
+    this.numOfTeams;
     this.day = 0;
   }
   startGame() {
     this.newUser();
-    this.nextDay();
     this.upgradeScoutingListener();
     this.newLeague();
+    this.nextDay();
+  }
+  newGameList () {
+    this.games = new GameList(this.teams,this.numOfTeams);
   }
   newLeague() {
     let freshLeague = new League();
     freshLeague.buildLeague();
+    this.numOfTeams = freshLeague.numOfTeams;
     this.teams = freshLeague.teamList;
   }
   newUser() {
@@ -27,6 +33,8 @@ class App {
     const getDayHouse = document.querySelector('#dayHouse');
     getDayHouse.innerHTML = `Day ${this.day} <button id="newDayButton">Finish Day</button>`
     this.dayEventListener();
+    this.newGameList();
+
   }
   dayEventListener() {
     let self = this;
