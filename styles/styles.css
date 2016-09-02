@@ -73,19 +73,19 @@ h3 {
 }
 
 .userInfo {
-    height: 1.5em;
-    width: 7em;
-    background-color: white;
-    border: 2px blue solid;
-    float: left;
-    top: 6%;
-    position: relative;
-    display: block;
-    left: 60%;
-    padding-top: .5em;
-    text-align: center;
-    font-size: 1.5em;
-    border-radius: .2em;
+  height: 1.5em;
+  width: 7em;
+  background-color: white;
+  border: 2px blue solid;
+  float: left;
+  margin-top: 5%;
+  position: relative;
+  display: block;
+  left: 60%;
+  padding-top: .5em;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: .2em;
 }
 
 #dayHouse {
@@ -111,5 +111,8 @@ button {
 
 #upgradeScouting {
   position: relative;
-  top: 50%;
+  right: -1em;
+  clear: both;
+  float: left;
+  font-size: 1.5em;
 }
