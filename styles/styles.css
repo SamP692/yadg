@@ -116,3 +116,38 @@ button {
   float: left;
   font-size: 1.5em;
 }
+
+#gameList {
+  position: relative;
+  float: left;
+  width: 51em;
+  height: 100%;
+  background-color: grey;
+}
+
+#bodyDiv {
+  width: 75em;
+  height: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+input {
+  width: 2em;
+  display: inline-block;
+}
+
+.return {
+  width: 2em;
+  display: inline-block;
+  height: 1.2em;
+  background-color: yellow;
+  border: 1px solid red;
+}
+
+#earnings {
+  width: 3em;
+  height: 1.2em;
+  background-color: white;
+  border: black solid 1px;
+}
