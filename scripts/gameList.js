@@ -13,6 +13,18 @@ class GameList {
     this.generateListOdds();
     this.renderList();
   }
+  // FUNCTION TO ITERATE THROUGH GAMES AND RUN CHECK EARNINGS FUNCTION
+  checkWinnings() {
+    let sumCounter = 0;
+    for (let i = 0; i < this.games.length; i++) {
+      const resultNodeFix = i + 1;
+      this.games[i].calculateWinnings(i);
+      const resultNode = document.querySelector('#return'+resultNodeFix);
+      sumCounter += parseInt(resultNode.innerHTML);
+    }
+    const earningsNode = document.querySelector('#earnings');
+    earningsNode.innerHTML = sumCounter;
+  }
   // FUNCTION TO CREATE LIST OF FICTIONAL GAMES WITH LIST OF TEAMS
   createGames() {
     while (this.gamesLeft > 0) {
@@ -39,17 +51,17 @@ class GameList {
   }
   // FUNCTION TO PUT A SINGLE GAME ON THE PAGE
   renderSingleGame(idx) {
-    let currentGame = idx + 1;
+    const currentGame = idx + 1;
     const newGameHouse = document.createElement('div');
     newGameHouse.setAttribute('class', 'gameHouse');
     newGameHouse.innerHTML =
     `
-      <input type="text" id="betA${currentGame}" /><p>${this.games[idx].teamA}(${this.games[idx].teamAAmerican}) vs ${this.games[idx].teamB}(${this.games[idx].teamBAmerican})</p><input type="text" id="betB${currentGame}" /> <div class="return" id="return${currentGame}"></div>
+      <input type="text" id="betA${currentGame}" /><p>${this.games[idx].teamA}(${this.games[idx].teamAAmerican} | ${this.games[idx].teamAScout}%) vs ${this.games[idx].teamB}(${this.games[idx].teamBScout}% | ${this.games[idx].teamBAmerican})</p><input type="text" id="betB${currentGame}" /> <div class="return" id="return${currentGame}"></div>
     `;
     const gameListNode = document.querySelector('#gameList');
     gameListNode.appendChild(newGameHouse);
   }
-  // FUCNTION TO PUT THE WHOLE LIST OF GAMES ON THE PAGE
+  // FUNCION TO PUT THE WHOLE LIST OF GAMES ON THE PAGE
   renderList() {
     for (let i = 0; i < this.games.length; i++) {
       this.renderSingleGame(i);
@@ -58,8 +70,26 @@ class GameList {
     summaryHouse.setAttribute('id', 'summaryHouse');
     summaryHouse.innerHTML = `
       Earnings: <span id="earnings"></span>
-    `
+    `;
     const gameListNode = document.querySelector('#gameList');
     gameListNode.appendChild(summaryHouse);
+  }
+  // FUNCTION CALLS ALL GAMES TO SIMULATE THEMSELVES
+  simulateGames() {
+    this.runAllGames();
+    let sumCounter = 0;
+    for (let i = 0; i < this.games.length; i++) {
+      const resultNodeFix = i + 1;
+      this.games[i].returnWinnings(i + 1);
+      const resultNode = document.querySelector('#return'+resultNodeFix);
+      sumCounter += parseInt(resultNode.innerHTML);
+    }
+    const earningsNode = document.querySelector('#earnings');
+    earningsNode.innerHTML = sumCounter;
+  }
+  runAllGames() {
+    for (let i = 0; i < this.games.length; i++) {
+      this.games[i].simulateGame();
+    }
   }
 }
