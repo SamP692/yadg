@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>YADG Game</title>
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-<div id="bodyDiv">
-  <h1>The world's first (and only) YADG Game</h1>
-
-  <div id="dayHouse"></div>
-
-  <div id="userHouse">
-    <div id="userHeader">
-      <div id="imageHouse">
-        <img src="images/userImage.jpg">
+  <head>
+  	<title>YADG Game</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <div id="bodyDiv">
+      <h1>The world's first (and only) YADG Game</h1>
+      <div id="dayHouse"></div>
+      <div id="userHouse">
+        <div id="userHeader">
+          <div id="imageHouse">
+            <img src="images/userImage.jpg">
+          </div>
+          <div id="nameHouse">
+            <h2><span id="nameSpan" style="border-bottom: 5px solid #3498db;"></span></h2>
+          </div>
+        </div>
+        <h3>Dough:</h3><span class="userInfo" id="cash"></span>
+        <h3>Scouting Team:</h3><span class="userInfo" id="scouting"></span>
+        <div id="upgradeScoutingHouse">
+          <button id="upgradeScouting">Upgrade Scouting</button>
+        </div>
       </div>
-      <h2></h2>
+      <div id="gameList">
+      </div>
     </div>
-    <h3>Dough:</h3><span class="userInfo" id="cash"></span>
-    <h3>Scouting Team:</h3><span class="userInfo" id="scouting"></span>
-    <button id="upgradeScouting">Upgrade Scouting</button>
-  </div>
-
-  <div id="gameList">
-  </div>
-
-</div>
-  <script src="scripts/game.js" charset="utf-8"></script>
-  <script src="scripts/gameList.js" charset="utf-8"></script>
-  <script src="scripts/league.js" charset="utf-8"></script>
-  <script src="scripts/user.js" charset="utf-8"></script>
-  <script src="scripts/app.js" charset="utf-8"></script>
-</body>
+    <script src="scripts/game.js" charset="utf-8"></script>
+    <script src="scripts/gameList.js" charset="utf-8"></script>
+    <script src="scripts/league.js" charset="utf-8"></script>
+    <script src="scripts/user.js" charset="utf-8"></script>
+    <script src="scripts/app.js" charset="utf-8"></script>
+  </body>
 </html>

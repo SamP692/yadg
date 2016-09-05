@@ -13,7 +13,7 @@ class User {
   }
   // BUILDS USER INFORMATION ON PAGE
   render() {
-    const nameCase = document.querySelector('h2');
+    const nameCase = document.querySelector('#nameSpan');
     nameCase.innerHTML = `${this.name}`;
     const moneyCase = document.querySelector('#cash');
     moneyCase.innerHTML = `$${this.cash}`;

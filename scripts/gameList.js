@@ -56,8 +56,14 @@ class GameList {
     newGameHouse.setAttribute('class', 'gameHouse');
     newGameHouse.innerHTML =
     `
-      <input type="text" id="betA${currentGame}" /><p>${this.games[idx].teamA}(${this.games[idx].teamAAmerican} | ${this.games[idx].teamAScout}%) vs ${this.games[idx].teamB}(${this.games[idx].teamBScout}% | ${this.games[idx].teamBAmerican})</p><input type="text" id="betB${currentGame}" /> <div class="return" id="return${currentGame}"></div>
+      <input type="text" placeholder="Your Bet" id="betA${currentGame}" /><p class="inline-paragraph">${this.games[idx].teamA} <small class="text-muted">(${this.games[idx].teamAAmerican} | ${this.games[idx].teamAScout}%)</small> vs ${this.games[idx].teamB} <small class="text-muted">(${this.games[idx].teamBScout}% | ${this.games[idx].teamBAmerican})</small></p><div class="return" id="return${currentGame}" class="pull-right"></div><input type="text" placeholder="Your Bet" id="betB${currentGame}" class="pull-right" />
     `;
+    // `
+    //   <td><input type="text" placeholder="Your Bet" id="betA${currentGame}" /></td>
+    //   <td>${this.games[idx].teamA} (${this.games[idx].teamAAmerican} | ${this.games[idx].teamAScout}%) vs ${this.games[idx].teamB} (${this.games[idx].teamBScout}% | ${this.games[idx].teamBAmerican})</td>
+    //   <td><input type="text" placeholder="Your Bet" id="betB${currentGame}"/></td>
+    //   <td><div class="return" id="return${currentGame}"></div></td>
+    // `;
     const gameListNode = document.querySelector('#gameList');
     gameListNode.appendChild(newGameHouse);
   }
@@ -69,7 +75,7 @@ class GameList {
     const summaryHouse = document.createElement('div');
     summaryHouse.setAttribute('id', 'summaryHouse');
     summaryHouse.innerHTML = `
-      Earnings: <span id="earnings"></span>
+      <div id="earnings-text">Earnings:</div> <span id="earnings"></span>
     `;
     const gameListNode = document.querySelector('#gameList');
     gameListNode.appendChild(summaryHouse);

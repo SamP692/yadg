@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans|Asap';
+
 body {
   margin: 0;
   padding: 0;
@@ -8,21 +10,23 @@ h1 {
   width: 100%;
   height: 2em;
   padding-top: .5em;
-  background-color: rgba(50, 37, 252, 0.67);
-  color: black;
+  background-color: #34495e;
+  color: white;
   text-align: center;
   margin: 0;
-  text-shadow: 5px 5px 10px white;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 #userHouse {
+  font-family: 'Droid Sans', sans-serif;
   width: 30em;
   height: 30em;
-  background-color: rgba(73, 73, 73, 0.5);
+  background-color: #f9f9f9;
   font-size: .75em;
   float: right;
   display: inline-block;
-  border: 3px solid rgb(100, 125, 217);
+  border: 1px solid #ddd;
+  margin-right: 5px;
 }
 
 #imageHouse {
@@ -30,8 +34,8 @@ h1 {
   height: 8em;
   border-radius: 50%;
   overflow: hidden;
-  margin: 10px;
-  border: 2px solid black;
+  margin: 25px 0 0px 25px;
+  border: 1px solid #ddd;
   display: inline-block;
 }
 
@@ -46,13 +50,17 @@ h2 {
   position: relative;
   padding: 0;
   margin: 0;
+  color: #333;
+  font-size: 2.6em;
+}
+
+#nameHouse {
+  clear: left;
+  height: 5em;
   float: right;
-  color: black;
-  font-size: 3em;
-  border-bottom: 1px solid red;
-  right: 31%;
-  top: 29%;
-  margin-bottom: 2em;
+  width: 65%;
+  text-align: center;
+  margin-top: 4em;
 }
 
 h3 {
@@ -60,10 +68,10 @@ h3 {
   float: right;
   display: inline-block;
   clear: both;
-  font-size: 2em;
+  font-size: 1.55em;
   top: 0%;
   right: 45%;
-  padding: 0;
+  padding-top: 8px;
   margin-bottom: 1em;
 }
 
@@ -76,7 +84,7 @@ h3 {
   height: 1.5em;
   width: 7em;
   background-color: white;
-  border: 2px blue solid;
+  border: 1px #2ecc71 solid;
   float: left;
   margin-top: 5%;
   position: relative;
@@ -90,64 +98,140 @@ h3 {
 
 #dayHouse {
   width: 100%;
-  background-color: black;;
+  background-color: #ecf0f1;
   text-align: center;
   height: 2em;
   font-size: 1.5em;
   padding-top: .5em;
-  color: white;
-  border-top: 3px solid red;
-  border-bottom: 3px solid red;
+  color: #333;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px -4px gray;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 button {
   text-decoration: none;
-  background-color: yellow;
-  border: 1px red solid;
-  font-size: .7em;
-  padding: .4em;
+  background-color: #3498db;
+  text-transform: uppercase;
+  font-size: .5em;
+  color: white;
+  padding: 10px 20px;
   margin-left: 1em;
+  border: 0;
+  border-radius: 6px;
+  font-family: 'Asap', sans-serif;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#upgradeScoutingHouse {
+  clear: both;
+  width: 100%;
+  height: 4em;
+  text-align: center;
 }
 
 #upgradeScouting {
   position: relative;
-  right: -1em;
-  clear: both;
-  float: left;
-  font-size: 1.5em;
+  font-size: inherit;
+  background-color: #fff;
+  border: 1px solid #bdc3c7;
+  color: #333;
+  margin-top: 3em;
+}
+#upgradeScouting:hover {
+  background-color: #bdc3c7;
 }
 
 #gameList {
   position: relative;
   float: left;
-  width: 51em;
+  width: 56.1em;
   height: 100%;
-  background-color: grey;
+  margin-left: 5px;
+  background-color: white;
+  font-family: 'Droid Sans', sans-serif;
 }
 
 #bodyDiv {
-  width: 75em;
+  width: 80em;
   height: 100%;
   margin: 0 auto;
   background-color: white;
 }
 
 input {
-  width: 3em;
+  width: 5em;
   display: inline-block;
+  border: 1px solid #95a5a6;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.inline-paragraph {
+  display: inline;
+}
+
+.gameHouse {
+  padding: .7em 2em;
+}
+
+.gameHouse:nth-of-type(odd) {
+  background-color: #f9f9f9;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.gameHouse:hover {
+  background-color: #f0f0f0;
 }
 
 .return {
-  width: 2em;
+  width: 2.7em;
   display: inline-block;
-  height: 1.2em;
-  background-color: yellow;
-  border: 1px solid red;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: white;
+  border: 1px solid #e74c3c;
+  float: right;
+  margin-left: 1.5em;
+  height: 13px;
+}
+
+.text-muted {
+  color: rgb(154, 154, 154);
+}
+
+#earnings-text {
+  float: left;
+  padding-top: 5px;
+  padding-right: 15px;
 }
 
 #earnings {
-  width: 3em;
-  height: 1.2em;
-  background-color: white;
-  border: black solid 1px;
+  width: 5em;
+  display: inline-block;
+  border: 1px solid #2ecc71;
+  border-radius: 6px;
+  padding: 5px 10px;
+  height: 1em;
+}
+
+p {
+  padding-left: 1.2em;
+  font-size: .9em;
+}
+
+.pull-right {
+  float: right;
+}
+
+#summaryHouse {
+  border-top: 1px solid #ddd;
+  padding-top: 0.95em;
+  padding-left: 2em;
 }
