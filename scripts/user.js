@@ -24,6 +24,14 @@ class User {
       upgradeButton.innerHTML = `Upgrade Scouting (${this.levelTwoCost})`;
     } else if (this.scouting===2) {
       upgradeButton.innerHTML = `Upgrade Scouting (${this.levelThreeCost})`;
+    } else if (this.scouting===3) {
+      upgradeButton.innerHTML = `Upgrade Scouting (${this.levelFourCost})`;
+    } else if (this.scouting===4) {
+      upgradeButton.innerHTML = `Upgrade Scouting (${this.levelFiveCost})`;
+    } else if (this.scouting===5) {
+      upgradeButton.innerHTML = `Upgrade Scouting (${this.levelSixCost})`;
+    } else if (this.scouting===6) {
+      upgradeButton.innerHTML = `Scouting Maxed`;
     }
   }
   // FUNCTION TO ALLOW USER TO UPGRADE THEIR SCOUTING TEAM
