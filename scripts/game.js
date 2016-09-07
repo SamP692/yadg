@@ -98,19 +98,19 @@ class Game {
   }
   // RANDOMLY BUILDS ACTUAL CHANCES FOR EITHER TEAM TO WIN
   trueOdds() {
-    const teamAOdds = Math.floor(Math.random() * (80 - 20)) + 20;
+    const teamAOdds = Math.floor(Math.random() * (70 - 30)) + 30;
     const teamBOdds = 100 - teamAOdds;
     this.teamATrue = teamAOdds;
     this.teamBTrue = teamBOdds;
   }
   // GENERATES BOOKIE'S ODDS WHICH IS PLUS/MINUS 20 POINTS FROM THE TRUE ODDS
   officialOdds() {
-    this.teamAOfficial = Math.floor(Math.random() * ((this.teamATrue + 20) - (this.teamATrue - 20)) + (this.teamATrue - 20));
+    this.teamAOfficial = Math.floor(Math.random() * ((this.teamATrue + 15) - (this.teamATrue - 15)) + (this.teamATrue - 15));
     this.teamBOfficial = 100 - this.teamAOfficial;
   }
   // GENERATES SCOUT TEAM'S ODDS WHICH PLUS MINUS X POINTS (DEPENDING ON LEVEL) FROM THE TRUE ODDS
   predictions() {
-    const scoutingEffect = 20 - (this.scouting * 2);
+    const scoutingEffect = 20 - (this.scouting * 3);
     this.teamAScout = Math.floor(Math.random() * ((this.teamATrue + scoutingEffect) - (this.teamATrue - scoutingEffect)) + (this.teamATrue - scoutingEffect));
     this.teamBScout = 100 - this.teamAScout;
   }
