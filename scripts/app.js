@@ -1,5 +1,3 @@
-console.log('app js loaded')
-
 class App {
   constructor() {
     this.user;
